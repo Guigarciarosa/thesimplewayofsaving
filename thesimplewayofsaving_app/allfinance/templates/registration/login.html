@@ -1,27 +1,80 @@
 {% load static %}
-
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href='../../static/allfinance/css/main.css'>
-</head>
-<body>
-    <div class="page">
-        <form method="POST" class="formLogin">
-            {% csrf_token %}
-            <h1>Login</h1>
-            <p>Digite os seus dados de acesso no campo abaixo.</p>
-            <label for="email">E-mail</label>
-            <input type="email" name="username" placeholder="Digite seu e-mail" autofocus="true" required />
-            <label for="password">Senha</label>
-            <input type="password" name="password" placeholder="Digite sua senha" required />
-            <a href="/">Esqueci minha senha</a>
-            <input type="submit" value="Acessar" class="btn" />
-        </form>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TheSimpleWayofSaving - Login</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../static/allfinance/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../static/allfinance/assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../../static/allfinance/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../../static/allfinance/assets/images/favicon.png" />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="row w-100 m-0">
+          <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
+            <div class="card col-lg-4 mx-auto">
+              <div class="card-body px-5 py-5">
+                <h3 class="card-title text-left mb-3">Login</h3>
+                <form>
+                  <div class="form-group">
+                    <label>Username or email *</label>
+                    <input type="text" class="form-control p_input">
+                  </div>
+                  <div class="form-group">
+                    <label>Password *</label>
+                    <input type="text" class="form-control p_input">
+                  </div>
+                  <div class="form-group d-flex align-items-center justify-content-between">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input"> Remember me </label>
+                    </div>
+                    <a href="#" class="forgot-pass">Forgot password</a>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+                  </div>
+                  <!--<div class="d-flex">
+                    <button class="btn btn-facebook mr-2 col">
+                      <i class="mdi mdi-facebook"></i> Facebook </button>
+                    <button class="btn btn-google col">
+                      <i class="mdi mdi-google-plus"></i> Google plus </button>
+                  </div> -->
+                  <p class="sign-up">Don't have an Account?<a href="#"> Sign Up</a></p>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+        </div>
+        <!-- row ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
     </div>
-</body>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../../static/allfinance/assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../../static/allfinance/ssets/js/off-canvas.js"></script>
+    <script src="../../static/allfinance/assets/js/hoverable-collapse.js"></script>
+    <script src="../../static/allfinance/assets/js/misc.js"></script>
+    <script src="../../static/allfinance/assets/js/settings.js"></script>
+    <script src="../../static/allfinance/assets/js/todolist.js"></script>
+    <!-- endinject -->
+  </body>
 </html>

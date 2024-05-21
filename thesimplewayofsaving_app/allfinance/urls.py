@@ -3,6 +3,7 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
+    path('', views.index, name='index'),
     path('create-budget/', views.create_budget, name='create_budget'),
     path('list-budgets/', views.list_budgets, name='list_budgets'),
     path('login/', views.user_login, name='login'),  # URL para a visualização de login

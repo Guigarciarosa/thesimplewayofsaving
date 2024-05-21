@@ -6,6 +6,11 @@ from django.contrib.auth.forms import AuthenticationForm
 from .forms import BudgetForm
 from .models import Budget
 
+
+def index(request):
+    return render(request, 'allfinance/index.html')
+
+
 def create_budget(request):
     if request.method == 'POST':
         form = BudgetForm(request.POST)
@@ -13,14 +18,14 @@ def create_budget(request):
             budget = form.save(commit=False)
             budget.user = request.user
             budget.save()
-            return redirect('list_budgets')
+            return redirect('allfinance/list_budgets')
     else:
         form = BudgetForm()
-    return render(request, 'create_budget.html', {'form': form})
+    return render(request, 'allfinance/create_budget.html', {'form': form})
 
 def list_budgets(request):
     budgets = Budget.objects.filter(user=request.user)
-    return render(request, 'list_budgets.html', {'budgets': budgets})
+    return render(request, 'allfinance/list_budgets.html', {'budgets': budgets})
 
 def user_login(request):
     if request.method == 'POST':
